@@ -1,0 +1,5 @@
+SELECT dept_name, COUNT(emp_no) AS employee_count
+FROM departments 
+JOIN employees ON dept_no = dept_no
+GROUP BY dept_name
+HAVING COUNT (emp_no) > 30;
